@@ -1,25 +1,51 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-
+// pages
+import Home from './Pages/Home';
+import About from './Pages/About';
+import Contact from './Pages/Contact';
+import Pages from './Pages/Pages';
+import Journal from './Pages/Journal';
+import Portfolio from './Pages/Portfolio';
+// Component
+import Sidebar from './Compontas/Sidebar/Sidebar';
+import ToggleButton from './Compontas/Header/Header';
+import Newsletter from './Compontas/Newsletter-form/Newsletter';
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='default-layout'>
+      <Router>
+
+        <ToggleButton />
+
+        <div className='sidebar-with-page'>
+        <div className='dekstop-sidbar'><Sidebar /></div>
+        <div className='pages-content'>
+        <Routes>
+
+
+          <Route path='/' element={<Home />} />
+          <Route path='/About' element={<About />} />
+          <Route path='/Portfolio' element={<Portfolio />} />
+          <Route path='/Contact' element={<Contact />} />
+          <Route path='/Pages' element={<Pages />} />
+          <Route path='/Journal' element={<Journal/>} />
+
+        </Routes>
+
+        <div className='main-footer'> <Newsletter/></div>
+        </div>
+      
+        </div>
+      </Router>
+
+    </div>
     </div>
   );
+
 }
 
 export default App;
+
