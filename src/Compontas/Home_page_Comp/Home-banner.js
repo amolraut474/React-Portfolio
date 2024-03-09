@@ -39,7 +39,7 @@ function AutoCarousel() {
             <div className='Slide-1'>
                 <div class="hero-item">
                     <h3>25 may 2021</h3>
-                    <h2> Trion Personal<br/> Creative  Portfolio</h2>
+                    <h2> Trion Personal<br/> Creative  Portfolio amol raut</h2>
                     <div class="hero-dec"></div>
                     <p>All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary .</p>
                     <button class="btn" type="submit">Submit</button>
