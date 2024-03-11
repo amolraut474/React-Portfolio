@@ -16,8 +16,15 @@ body{
     padding: 24px 30px;
     color: #fff;
 }
+
 @media (max-width: 768px) {
 .pages-content{
     padding: 0;
+}
+}
+@media (max-width: 1440px){
+.sidebar-with-page {
+    display: grid;
+    grid-template-columns: 22% 78%;
 }
 }
